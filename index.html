@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>割烹みずほ — 季節の味わい</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Hiragino Mincho ProN', serif;
+      /* 和紙風テクスチャを背景に設定 */
+      background: url('washi-texture.jpg') center/cover no-repeat fixed;
+      color: #1b1b1b;
+      overflow-x: hidden;
+    }
+    header {
+      background-color: rgba(255,255,255,0.8);
+      text-align: center;
+      padding: 1rem 0;
+      letter-spacing: 0.12em;
+      border-bottom: 1px solid #e6e0da;
+      opacity: 0; transform: translateY(-20px);
+      transition: opacity 1s ease, transform 1s ease;
+    }
+    header.visible {
+      opacity: 1; transform: translateY(0);
+    }
+    header h1 {
+      margin: 0;
+      font-size: 1.6rem;
+      color: #3e3a39;
+    }
+    nav {
+      text-align: center;
+      padding: 0.6rem 0;
+      background-color: rgba(255,255,255,0.8);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    nav a {
+      color: #555;
+      margin: 0 1rem;
+      text-decoration: none;
+      transition: color 0.25s;
+    }
+    nav a:hover {
+      color: #a68a64;
+    }
+    .hero {
+      background-image: url('kaisekiryouri1.webp');
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: cover;
+      filter: brightness(1.08) saturate(0.95);
+      height: 70vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      opacity: 0; transform: scale(1.05);
+      transition: opacity 2s ease, transform 1.5s ease;
+    }
+    .hero.visible {
+      opacity: 1; transform: scale(1);
+    }
+    .hero h2 {
+      font-size: 2.2rem;
+      color: #111;
+      background-color: rgba(255,255,255,0.85);
+      padding: 0.9rem 1.6rem;
+      border-radius: 8px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+      max-width: 90%;
+      text-align: center;
+    }
+    section {
+      padding: 3.2rem 10%;
+      max-width: 900px;
+      margin: auto;
+      border-bottom: 1px solid #efe7df;
+      background: rgba(255,255,255,0.85);
+      border-radius: 8px;
+      opacity: 0; transform: translateY(30px);
+      transition: opacity 1.2s ease, transform 1.2s ease;
+    }
+    section.visible {
+      opacity: 1; transform: translateY(0);
+    }
+    section h2 {
+      color: #a68a64;
+      border-left: 4px solid #a68a64;
+      padding-left: 10px;
+      margin-bottom: 1rem;
+    }
+    .menu-item {
+      margin-bottom: 1.6rem;
+    }
+    .menu-item h3 {
+      margin: 0;
+      color: #3e3a39;
+    }
+    .menu-photo {
+      width: 75%;
+      max-width: 100%;
+      border-radius: 8px;
+      display: block;
+      margin: 1.2rem auto;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 1.5s ease, transform 1.5s ease;
+    }
+    .menu-photo.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .map-container {
+      width: 100%;
+      height: 400px;
+      margin-top: 1.5rem;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    .reserve-btn {
+      display: inline-block;
+      background-color: #a68a64;
+      color: #fff;
+      padding: 0.8rem 1.6rem;
+      border-radius: 6px;
+      text-decoration: none;
+      margin-top: 1rem;
+      transition: background-color 0.3s;
+    }
+    .reserve-btn:hover {
+      background-color: #8b7354;
+    }
+    footer {
+      text-align: center;
+      padding: 2rem 0;
+      font-size: 0.9rem;
+      color: #777;
+      background-color: rgba(255,255,255,0.8);
+      border-top: 1px solid #efe7df;
+      opacity: 0; transform: translateY(20px);
+      transition: opacity 1s ease, transform 1s ease;
+    }
+    footer.visible {
+      opacity: 1; transform: translateY(0);
+    }
+  </style>
+</head>
+<body>
+  <header><h1>割烹みずほ</h1></header>
+  <nav>
+    <a href="#about">お店について</a>
+    <a href="#concept">こだわり</a>
+    <a href="#menu">お品書き</a>
+    <a href="#access">アクセス</a>
+    <a href="#reserve">ご予約</a>
+  </nav>
+
+  <div class="hero"><h2>季節を味わう、心づくしの懐石</h2></div>
+
+  <section id="about">
+    <h2>お店について</h2>
+    <p>当店では、四季折々の食材を活かした懐石料理をお届けしております。静かな和の空間で、旬の味覚と真心を込めたおもてなしをお楽しみください。</p>
+  </section>
+
+  <section id="concept">
+    <h2>こだわり</h2>
+    <p>出汁は毎朝、昆布と鰹節を丁寧に引き出し、一椀ごとに最良の旨味を追求しています。器は京都や有田の職人による手仕事。料理を引き立てる色彩や質感にも心を尽くしています。</p>
+    <p>お客様一人ひとりの「特別な時間」を演出するため、季節の移ろいに合わせてお品書きも変化します。</p>
+  </section>
+
+  <section id="menu">
+    <h2>お品書き</h2>
+
+    <div class="menu-item">
+      <h3>季節の懐石コース</h3>
+      <p>旬の素材を使った月替わりのコースです。</p>
+      <img src="https://images.unsplash.com/photo-1541542684-8f7f5b4e1b2a?q=80&w=600" alt="懐石料理1" class="menu-photo">
+    </div>
+
+    <div class="menu-item">
+      <h3>昼膳</h3>
+      <p>お昼限定の御膳スタイル。</p>
+      <img src="https://images.unsplash.com/photo-1525755662778-989d0524087e?q=80&w=600" alt="懐石料理2" class="menu-photo">
+    </div>
+
+    <div class="menu-item">
+      <h3>会席特選</h3>
+      <p>贅沢な食材を取り入れた特選コース。</p>
+      <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=600" alt="懐石料理3" class="menu-photo">
+    </div>
+  </section>
+
+  <section id="access">
+    <h2>アクセス</h2>
+    <p>
+      東京都千代田区丸の内1-1-1<br>
+      JR東京駅より徒歩5分<br>
+      営業時間：11:30〜14:30 / 17:00〜22:00<br>
+      定休日：日曜・祝日
+    </p>
+    <div class="map-container">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3240.962502074853!2d139.76394141563647!3d35.68123698019337!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188bf3708f6e65%3A0x5e4e9cf7d0c51a5c!2z5p2x5Lqs6YO95paw5a6_5Yy65p2x5Lqs5LiA5aSn6Ziq5YWs5Y-4!5e0!3m2!1sja!2sjp!4v1638777640325!5m2!1sja!2sjp"
+        width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy">
+      </iframe>
+    </div>
+  </section>
+
+  <section id="reserve">
+    <h2>ご予約</h2>
+    <p>お電話またはWebにてご予約を承っております。特別な日の会食や記念日などにもご利用ください。</p>
+    <a href="tel:03-1234-5678" class="reserve-btn">お電話で予約</a>
+    <a href="#" class="reserve-btn">Web予約フォーム</a>
+  </section>
+
+  <footer><p>© 2025 割烹みずほ All Rights Reserved.</p></footer>
+
+  <script>
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.2 });
+
+    document.querySelectorAll('header, .hero, section, footer, .menu-photo').forEach(el => {
+      observer.observe(el);
+    });
+  </script>
+</body>
+</html>
