@@ -4,22 +4,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>割烹みずほ — 季節の味わい</title>
-  /* --- スマホサイズでのデザイン調整 --- */
-@media (max-width: 600px) {
-  nav {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 0.4rem; /* ボタンの間隔を少し狭く */
-    padding: 0.5rem 0.2rem;
-  }
-
-  nav a {
-    font-size: 0.9rem; /* 文字を少し小さく */
-    margin: 0 0.5rem;  /* 横の余白を狭く */
-  }
-}
-
   <style>
     body {
       margin: 0;
@@ -163,6 +147,23 @@ overflow-x: hidden;
     footer.visible {
       opacity: 1; transform: translateY(0);
     }
+
+    /* --- スマホサイズでのデザイン調整 --- */
+@media (max-width: 600px) {
+  nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.4rem; /* ボタンの間隔を少し狭く */
+    padding: 0.5rem 0.2rem;
+  }
+
+  nav a {
+    font-size: 0.9rem; /* 文字を少し小さく */
+    margin: 0 0.5rem;  /* 横の余白を狭く */
+  }
+}
+
   </style>
 </head>
 <body>
@@ -250,5 +251,6 @@ overflow-x: hidden;
   </script>
 </body>
 </html>
+
 
 
